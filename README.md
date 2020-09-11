@@ -1,4 +1,4 @@
- :fire: Projeto em andamento, estamos desenvolvendo nas lives na https://www.twitch.tv/loiane.
+
 
 # CrudAngularNode
 
