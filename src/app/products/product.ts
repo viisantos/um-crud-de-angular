@@ -1,17 +1,14 @@
 export interface Product {
   id: number;
   name: string;
-
 }
-/*tipo X interface: -os tipos permitem manipulação mais flexível.
--interface é uma forma mais simples de se declarar uma classe.
+/*
+Classe X interface
+interface em typescript é uma declaração de um tipo de dado
 
-
--interfaces servem para declarar um tipo de dado.
--use tipos primitivos com letras minusculas. Padrao de boa pratica.
-
--prefira interfaces para declarar tipos.
--para implementar lógica, utilize classes.
-
-
+tipo com letra minuscula é primitivo. com maiuscula é  objeto.
+tipo -> permite manuseio mais flexivel.
+interface -> maneira mais simples de se tentar declarar um tipo de dado.
 */
+
+
