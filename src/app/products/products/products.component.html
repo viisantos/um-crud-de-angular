@@ -1,7 +1,6 @@
-<div class="mat-elevation-z8">
+<div class="envolve-tabela">
 
-  <table mat-table [dataSource]="products" class="mat-elevation-z8">
-
+  <table mat-table [dataSource]="products" >
     <!-- ID Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> ID </th>
@@ -9,25 +8,25 @@
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
+    <ng-container matColumnDef="name" class="botoes">
       <th mat-header-cell *matHeaderCellDef> Name </th>
       <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
     </ng-container>
 
     <!-- Action Column -->
     <ng-container matColumnDef="actions">
-      <mat-header-cell *matHeaderCellDef>
-        <button mat-mini-fab color="accent" aria-label="Add New Product" (click)="onAdd()">
+      <mat-header-cell *matHeaderCellDef  >
+        <button mat-button color="accent" aria-label="Add New Product" (click)="onAdd()">
           <mat-icon>add</mat-icon>
         </button>
       </mat-header-cell>
 
-      <mat-cell *matCellDef="let element">
-        <button mat-mini-fab color="primary" aria-label="Modify Product"
+      <mat-cell *matCellDef="let element" >
+        <button mat-button color="primary" class="actions-btn" aria-label="Modify Product"
           (click)="onEdit(element)">
           <mat-icon>edit</mat-icon>
         </button>
-        <button mat-mini-fab color="warn" aria-label="Remove Product"
+        <button mat-button color="warn" class="actions-btn" aria-label="Remove Product"
           (click)="onRemove(element)">
           <mat-icon>delete</mat-icon>
         </button>
@@ -37,5 +36,6 @@
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
   </table>
 </div>
