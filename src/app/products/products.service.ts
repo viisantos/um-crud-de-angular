@@ -16,11 +16,8 @@ export class ProductsService {
     }
   }
 
-
-
   // tslint:disable-next-line: typedef
   listAll(): Observable <Product[]>{
     return of(this.products);
-
   }
 }

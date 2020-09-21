@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ProductsService } from '../products.service';
 import { Product } from '../product';
 
@@ -11,27 +10,19 @@ import { Product } from '../product';
 export class ProductsComponent implements OnInit {
 
   products: Product[] = [];
-  displayedColumns: string[] = ['id', 'name', 'actions'];
+  displayedColumns: string[] = ['id','name'];
 
-  constructor(private service: ProductsService) { }
+  constructor(private service: ProductsService) {
+
+   }
 
   ngOnInit(): void {
-    this.service.listAll().subscribe(results => {
+    this.service.listAll().subscribe(results =>  {
+
       console.log(results);
       this.products = results;
+
     });
   }
-
-  onAdd(): void {
-    console.log('Add');
-  }
-
-  onEdit(product: Product): void {
-    console.log(product);
-  }
-
-  onRemove(product: Product): void {
-    console.log(product);
-  }
-
 }
+
