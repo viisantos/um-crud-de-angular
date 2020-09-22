@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # Reprodução de tutorial de CRUD Angular + node - Live da Loiane no twitch
 
