@@ -1,6 +1,6 @@
+import { ProductsService } from './../products.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-
 @Component({
   selector: 'app-product-form',
   templateUrl: './product-form.component.html',
@@ -8,14 +8,19 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 })
 export class ProductFormComponent implements OnInit {
 
-  form: FormGroup;
+  form: FormGroup; //Criar um objeto FormGroup para o associar com o formulário no template.
 
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      name: [null, Validators.required]
-    });
-  }
+  constructor(private formbuilder: FormBuilder, private location: Location, private service: ProductsService) {
+    this.form = this.formbuilder.group({
+      name: [null, Validators.required] //esta linha consiste na instanciação de um formControl(um campo do formulário). É uma sintaxe mais amigável para se fazer isso.)
+   });
+   }
 
   ngOnInit(): void { }
 
+  onSubmit(): void {}
+
+  onCancel(): void {}
+
+  isFieldRequired(): void {}
 }
